@@ -6,14 +6,7 @@ using namespace std;
 const int n=30;
 const int m=100;
 
-void printArr (char arr[n][n]) {
-    for (int i=0; i<n; i++){
-        for (int j=0; j<n; j++){
-            cout<<arr[i][j]<<' ';
-        }
-        cout<<endl;
-    }
-}
+
 void bombRandom (char lead[n][n]) {
 int i, j;
 for (i=0; i<n; i++){

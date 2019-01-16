@@ -46,10 +46,3 @@ for (int t=0; t<m; t++){
     map[i][j]='9';
 }
 }
-
-int main () {
-    char map[n][n];
-    bombRandom (map);
-    printArr (map);
-
-}

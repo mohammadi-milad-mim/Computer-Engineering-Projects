@@ -1,10 +1,13 @@
 #include <iostream>
 #include <stdlib.h>
 #include <time.h>
+//#include <windows.h>
+//#include <mmsystem.h>
 using namespace std;
 
 const int n=10;//martix will be n*n
 const int m=10;//number of boomb
+const int s=2;//special
 
 void find_number (char [n][n]);
 void printArr (char [n][n]);
@@ -17,13 +20,13 @@ void win (char [n][n],int &,char [n][n]);
 
 int main ()
 {
+    system ("color 89");
     char map[n][n],lead[n][n];
-    int i,j,k,flag;
+    int i,j,k,flag, x=0;
     bombRandom (lead);
     find_number(lead);
-    printArr(lead);
-
-    for (int i=0; i<n; i++){
+    //printArr(lead);
+        for (int i=0; i<n; i++){
         for (int j=0; j<n; j++){
             map[i][j]='*';
         }
@@ -35,7 +38,7 @@ int main ()
         {
         cout<<"row:"<<endl;
         cin>>i;
-        cout<<"colum0:"<<endl;
+        cout<<"colum:"<<endl;
         cin>>j;
         }while(!(((i<n)&&(i>=0))&&((j<n)&&(j>=0))));
 
@@ -76,7 +79,7 @@ int main ()
                 gameover(i,j,flag,lead);
                     if(flag==1)
                     {
-                        return 0;
+                        break;
                     }
                    show(i,j,map,lead);
                    printArr(map);
@@ -90,6 +93,9 @@ int main ()
         }
 
     }
+    }while (x==0);
+
+    
 
 
 }
@@ -107,6 +113,13 @@ for (int t=0; t<m; t++){
     j = rand() % n;
     lead[i][j]='9';
 }
+/*for (int t=0; t<s; t++){
+    i = rand() % n;
+    j = rand() % n;
+    lead[i][j]='#';
+}*/
+
+    
 
 }
 void printArr (char a[n][n]) {
@@ -239,6 +252,7 @@ else
 
 void gameover (int i,int j,int &flag,char lead [n][n]){
     // if clicked on bomb!
+    int t=0;
     if (lead[i][j]==57){
             flag=1;
         cout<<endl<<"Game Over! :("<<endl;
@@ -250,6 +264,9 @@ void gameover (int i,int j,int &flag,char lead [n][n]){
         }
         cout<<endl;
     }
+    cout<<"Do You want to play again? Yes:0 No:1" <<endl;
+    cin>>t;
+    flag=t;
     }
 }
 
@@ -277,6 +294,9 @@ void win (char map[n][n],int &flag,char lead[n][n])
         }
         cout<<endl;
     }
+    /*cout<<"Do You want to play again? Yes:0 No:1" <<endl;
+    cin>>t;
+    x=t;*/
 
     }
 }

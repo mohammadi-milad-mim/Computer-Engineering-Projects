@@ -41,8 +41,25 @@ while True:
             var = line[i: len(line) + 1] == ''
         if line[i] == '*/':
             var = line[0: i + 1] == ''
-    listToStr = ''.join([str(elem) for elem in line])
+    istToStr = ''.join([str(elem) for elem in line])
     my_file.writelines(listToStr)
 
     if not line:
         break
+  
+# ----- defines -----
+while True:
+    list_of_defines = []
+    my_file_line = my_file.readline()
+    line = my_file_line.split()
+    for i in range(len(line)):
+        if line[i] == '#' and line[i+1] == 'define':
+            list_of_defines.append([line[i+2],line[i+3)
+                                                   
+     
+# ----- undefs -----
+
+
+
+
+# ----- typedefs -----

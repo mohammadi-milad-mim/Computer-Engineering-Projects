@@ -1,6 +1,6 @@
 from AES_D import aes_d
 from AES_E import aes_e
-from CHUNK import chunking, len_of_padding, len_of_txt
+from CHUNK import chunking, len_of_padding, len_of_txt, removePadding
 from KEY_GENERATION import genRoundsKeys
 from TXT_PROCESS import hex_to_txt, reArrangeOutPut, read_from_file, write_to_file, write_to_file_cipher
 

@@ -21,5 +21,5 @@ for i in cipher_parts:
     output_parts.append(reArrangeOutPut(aes_d(i,round_keys)))
 
 
-output_parts = removePadding(output_parts)
+output_parts = removePadding(output_parts,len_padd)
 write_to_file("files/output.txt",output_parts)

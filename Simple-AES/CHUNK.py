@@ -28,7 +28,8 @@ def chunking(stri):
     parts = split_to_128bit(stri,len_txt)
     return parts
 
-def remove_padding(stri):
-    return stri[:()]
+def removePadding(li,len_padd):
+    li[-1]=li[-1][:16-len_padd]
+    return li
 
 #print(split_to_128bit("i am millad and im writing a aes algohritm and i have so much fun"))

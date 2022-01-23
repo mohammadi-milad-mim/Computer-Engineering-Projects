@@ -27,10 +27,16 @@ We spent most of our time on searching, learning and designing the things needed
 
 ## Codes:
 ### PreProcessing:
+#### Design: Sara, Millad
+#### Code: Millad
 
 ### Lexical Analysis:
+#### Design: Amir
+#### Code: Amir
 
 ### Semantic Analysis:
+#### Ideas: Team!
+#### Design: Sara
 
 ## Challanges:
 

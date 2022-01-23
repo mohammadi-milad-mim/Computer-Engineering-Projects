@@ -15,9 +15,9 @@ def comment_remover(text):
 
 number_of_files = 1
 for i in range(number_of_files):
-    in_file_name = "files_0/f_0_{num}.txt".format(num=i+1)
-    out_file_name = "files_1/f_1_{num}.txt".format(num=i+1)
-    temp_file_name = "files_0/t_0_{num}.txt".format(num=i+1)
+    in_file_name = "files/files_0/f_0_{num}.txt".format(num=i+1)
+    out_file_name = "files/files_1/f_1_{num}.txt".format(num=i+1)
+    temp_file_name = "files/files_0/t_0_{num}.txt".format(num=i+1)
     fin = open(in_file_name, "r")
     fout = open(out_file_name, "w")
     ftemp = open(temp_file_name,"w")

@@ -153,8 +153,8 @@ class lexical:
 lx = lexical()
 number_of_files = 1
 for i in range(number_of_files):
-    in_file_name = "files_1/f_1_{num}.txt".format(num=i+1)
-    out_file_name = "files_2/f_2_{num}.txt".format(num=i+1)
+    in_file_name = "files/files_1/f_1_{num}.txt".format(num=i+1)
+    out_file_name = "files/files_2/f_2_{num}.txt".format(num=i+1)
     fin = open(in_file_name, "r")
     fout = open(out_file_name, "w")
     for s in fin.readlines():

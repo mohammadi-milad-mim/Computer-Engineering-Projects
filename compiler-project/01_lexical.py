@@ -1,4 +1,3 @@
-
 class lexical:
       operator_signs = ['!', '%', '^', '*', '+', '/', '-', '<', '>', '=']
       special_signs = ['(', ')', '[', ']', '{', '}', ';']
@@ -151,23 +150,30 @@ class lexical:
             else :
                   self.ans = ("ERROR", "ERROR")
                   return i+1
-            
 lx = lexical()
-import sys
+number_of_files = 1
+for i in range(number_of_files):
+    in_file_name = "files_1/f_1_{num}.txt".format(num=i+1)
+    out_file_name = "files_2/f_2_{num}.txt".format(num=i+1)
+    fin = open(in_file_name, "r")
+    fout = open(out_file_name, "w")
+    for s in fin.readlines():
+        #print(s)
+        i = 0
+        while i < len(s)-1 :
+                while s[i] == ' ':
+                    i += 1
 
-for s in sys.stdin:
-      i = 0
-      while i < len(s)-1 :
-            while s[i] == ' ':
-                  i += 1
+                if i == len(s)-1:
+                    break
 
-            if i == len(s)-1:
-                  break
+                i = lx.get_next_token(i)
 
-            i = lx.get_next_token(i)
-
-            if lx.ans == ("ERROR", "ERROR"):
-                  print ("ERROR at character : ", i-1)
-                  break
-            
-            print (lx.ans)
+                if lx.ans == ("ERROR", "ERROR"):
+                    print ("ERROR at character : ", i-1)
+                    break
+                #print(lx.ans)
+                fout.write(':'.join(lx.ans))
+                fout.write("\n")
+    fin.close()
+    fout.close()

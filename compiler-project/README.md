@@ -34,7 +34,7 @@ We spent most of our time on searching, learning and designing the things needed
 #### Design: Amir
 #### Code: Amir
 
-### Semantic Analysis:
+### Parsing:
 #### Ideas: Team!
 #### Design: Sara
 

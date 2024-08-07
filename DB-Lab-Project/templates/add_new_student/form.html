@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Add New Student</title>
+    <link href="{{ url_for('static', path='style.css') }}" rel="stylesheet">
+    <script src="{{ url_for('static', path='PostFunction.js') }}"></script>
+</head>
+
+<body>
+    
+    <form id="form1" action="http://localhost:8000/add_new_student_submit" method="post">
+        <table border="0">
+            <tr>
+                <td>
+                    Name:
+                </td>
+                <td>
+                    <input type="text" name="name" id="name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Score:
+                </td>
+                <td>
+                    <input type="text" name="score" id="score">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Year:
+                </td>
+                <td>
+                    <input type="text" name="year" id="year">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="submit" onclick="sendPost('form1')">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
